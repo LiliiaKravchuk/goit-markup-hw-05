@@ -91,8 +91,8 @@ header {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: rgb(0, 0, 128);
-  width: 156px;
+  color: #2e2f42;
+  width: 115px;
   background: #fff;
   border-bottom: 1px solid #e7e9fc;
   margin-right: 76px;
@@ -130,6 +130,7 @@ header {
   transition: tranform 250ms ease-in-out;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #404bbf;
+
 }
 
 /* .header-menu-link:is(:hover, :focus) {
@@ -166,6 +167,7 @@ header {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+    color: #434455;
 }
 
 /* .header-contacts-link:hover, .header-contacts-link:focus {
@@ -272,10 +274,8 @@ header {
   letter-spacing: 0.04em;
   color: white;
   cursor: pointer;
-  padding: 100px;
   border-radius: 4px;
   padding: 16px 32px;
-  max-width: 169px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
   transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
@@ -290,11 +290,12 @@ header {
 }
 
 .features {
+ margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .features-list {
-  margin-top: 120px;
-  margin-bottom: 409px;
+
   display: flex;
   gap: 24px;
   justify-content: center;
@@ -302,7 +303,7 @@ header {
 }
 
 .features-item {
-  width: calc((100% - 24px * 2) / 4);
+  max-width: calc((100% - 3*24px) / 4);
 }
 
 .features-icon-container {
@@ -404,7 +405,7 @@ header {
 }
 
 .portfolio {
-  padding-bottom: 120px;
+  padding-bottom: 120px 0;
 }
 
 .portfolio-title {
@@ -412,7 +413,6 @@ header {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  margin: 120px auto 72px auto;
 }
 
 .portfolio-list {
@@ -473,6 +473,8 @@ header {
 }
 
 .footer {
+      padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-menu {
