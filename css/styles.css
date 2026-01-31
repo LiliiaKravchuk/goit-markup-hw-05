@@ -18,6 +18,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--slate);
+    --second-family: "Raleway", sans-serif;
 }
 
 /* p, a - 400, h1 - 700 */
@@ -227,7 +228,7 @@ header {
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #2e2f42;
+  color: var(--slate);
 }
 
 .section-description-basic {
@@ -236,7 +237,7 @@ header {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #434455;
+  color: var(--slate);
 }
 
 .hero {
@@ -314,6 +315,7 @@ header {
   width: 264px;
   height: 112px;
   background-color: #f4f4fd;
+    margin-bottom: 8px;
 }
 
 .features-icon {
@@ -341,7 +343,7 @@ header {
 }
 
 .team-cards {
-  background: var(--cloud);
+  background: var(--white);
   padding: 120px 0px;
 }
 
@@ -403,6 +405,12 @@ header {
 }
 
 .team-icon {
+  fill: #f4f4fd;
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus{
+  color:chocolate;
 }
 
 .portfolio {
@@ -447,6 +455,7 @@ header {
   left: 0;
   /* put on image on it full size*/
   height: 100%;
+    width: 100%;
   font-size: 16px;
   color: #f4f4fd;
   background-color: #4d5ae5;
@@ -481,11 +490,12 @@ header {
 
 .footer-menu {
   display: flex;
-  align-content: baseline;
+
   gap: 120px;
   background: var(--navy-blue);
   /* move into center in horizontal */
   justify-content: center;
+    align-items: baseline;
 }
 
 .footer-title {
@@ -526,8 +536,11 @@ header {
   display: flex;
   margin-left: 120px;
   justify-content: center;
-  align-items: center;
+  align-items:flex-start;
   flex-direction: column;
+  .social-icons {
+    margin-right: 16px;
+  }
 }
 .footer-social-text {
   padding-bottom: 16px;
