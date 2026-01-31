@@ -18,7 +18,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--slate);
-    --second-family: "Raleway", sans-serif;
+  --second-family: "Raleway", sans-serif;
 }
 
 /* p, a - 400, h1 - 700 */
@@ -56,12 +56,16 @@ button {
 }
 
 .container {
-  width: 1158px;
+  max-width: 1158px;
+  /* максимально допустима ширина */
   /* 1158-1128=30/2=15px paddings */
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 100%;
+  /* дозволяє елементу зменшуватися */
+
   margin-left: auto;
   margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 header {
@@ -242,6 +246,11 @@ header {
 
 .hero {
   background: #2e2f42;
+  background-image:
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -259,11 +268,6 @@ header {
   align-items: center;
   flex-direction: column;
   gap: 48px;
-  background-image:
-    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/hero-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .hero-btn-blue {
@@ -293,8 +297,8 @@ header {
 }
 
 .features {
-  margin-top: 120px;
-  margin-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .features-list {
@@ -315,7 +319,7 @@ header {
   width: 264px;
   height: 112px;
   background-color: #f4f4fd;
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .features-icon {
@@ -376,6 +380,10 @@ header {
 .team-cards-img {
   /* min-width: 100%; */
   object-fit: cover;
+  max-width: 264px;
+  max-height: 260px;
+  width: 100%;
+  diplay: block;
 }
 
 .team-cards-subtitle {
@@ -409,8 +417,8 @@ header {
 }
 
 .social-icons-link:hover,
-.social-icons-link:focus{
-  color:chocolate;
+.social-icons-link:focus {
+  color: chocolate;
 }
 
 .portfolio {
@@ -440,12 +448,15 @@ header {
 }
 
 .portfolio-img {
-  max-width: 100%;
+width: 100%;
+height: auto;
+display: block;
 }
 
 .portfolio-img-cover {
   position: relative;
   overflow: hidden;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .appearing-text-portfolio {
@@ -455,21 +466,25 @@ header {
   left: 0;
   /* put on image on it full size*/
   height: 100%;
-    width: 100%;
+  width: 100%;
   font-size: 16px;
   color: #f4f4fd;
   background-color: #4d5ae5;
   padding: 40px 32px;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-100%);
+  /*hide to top */
   opacity: 0;
+  transition:
+    tranform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-img-cover:hover .appearing-text-portfolio {
   transform: translateY(0);
   opacity: 1;
 }
 
-.portfolio-img-cover:hover .portfolio-item {
+.portfolio-img-cover:hover
+{
   box-shadow:
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
@@ -495,7 +510,7 @@ header {
   background: var(--navy-blue);
   /* move into center in horizontal */
   justify-content: center;
-    align-items: baseline;
+  align-items: baseline;
 }
 
 .footer-title {
@@ -536,7 +551,7 @@ header {
   display: flex;
   margin-left: 120px;
   justify-content: center;
-  align-items:flex-start;
+  align-items: flex-start;
   flex-direction: column;
   .social-icons {
     margin-right: 16px;
@@ -550,7 +565,49 @@ header {
   letter-spacing: 0.02em;
   color: #fff;
 }
+.footer-modal-title {
+  padding-bottom: 24px;
+  color: #fff;
+}
 
+.footer-subscribe-form {
+  width: 288px;
+}
+
+.footer-modal-form {
+}
+
+.footer-modal-input {
+  width: 100%;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  /* width: 360px; */
+  min-height: 40px;
+  outline: transparent;
+  background-color: transparent;
+}
+
+.footer-btn-submit {
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  background: #4d5ae5;
+}
+
+.footer-input-wrapper {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 288px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
 /* --------------------------------------------------------------------- */
 
 .modal-overlay {
@@ -668,15 +725,13 @@ header {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus
-{
+.modal-input:focus {
   border-color: #4d5ae5;
   outline: none;
 }
 
 .modal-input:focus + .input-icon {
   fill: var(--iris);
-
 }
 
 .modal-field-textarea {
