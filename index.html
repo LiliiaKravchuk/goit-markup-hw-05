@@ -32,9 +32,9 @@
             ><span class="colorine">WEB</span>STUDIO</a
           >
           <ul class="header-menu-list">
-            <li aria-current-="page" class="header-menu-item">
+            <li class="header-menu-item">
               <div class="header-menu-underline">
-                <a class="header-menu-link" href="">Studio</a>
+                <a class="header-menu-link current_page" href="">Studio</a>
               </div>
             </li>
             <li class="header-menu-item">
@@ -83,9 +83,7 @@
             <li class="features-item">
               <div class="features-icon-container">
                 <svg width="64px" height="64px" class="features-icon">
-                  <use
-                    href="./images/icons.svg#icon-features_antenna"
-                  ></use>
+                  <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
               <h3 class="features-subtitle section-subtitle-basic">Strategy</h3>
@@ -97,7 +95,7 @@
             <li class="features-item">
               <div class="features-icon-container">
                 <svg width="64px" height="64px" class="features-icon">
-                  <use href="./images/icons.svg#icon-features_clock"></use>
+                  <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
               <h3 class="features-subtitle section-subtitle-basic">
@@ -111,9 +109,7 @@
             <li class="features-item">
               <div class="features-icon-container">
                 <svg width="64px" height="64px" class="features-icon">
-                  <use
-                    href="./images/icons.svg#icon-features_diagram"
-                  ></use>
+                  <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
               <h3 class="features-subtitle section-subtitle-basic">
@@ -128,9 +124,7 @@
             <li class="features-item">
               <div class="features-icon-container">
                 <svg width="64px" height="64px" class="features-icon">
-                  <use
-                    href="./images/icons.svg#icon-features_astronaut"
-                  ></use>
+                  <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
               <h3 class="features-subtitle section-subtitle-basic">
@@ -521,22 +515,29 @@
             </li>
           </ul>
         </div>
-         <div class="footer-subscribe-form">
+        <div class="footer-subscribe-form">
           <p class="footer-modal-title">Subscribe</p>
           <form class="footer-modal-form">
-            <div>
-              <label for="user-email" class="modal-input-label">Email</label>
+            <div class="wrapper_button">
               <div class="footer-input-wrapper">
                 <input
                   type="email"
                   class="footer-modal-input"
                   name="user-email"
                   id="user-email"
+                  placeholder="e-mail"
                   required
                 />
               </div>
+
+                <button class="footer-btn-submit" type="submit">
+                  Subscribe
+                  <svg width="24px" height="24px" class="send-icon">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+
             </div>
-            <button class="footer-btn-submit" type="submit">Subscribe</button>
           </form>
         </div>
       </section>
