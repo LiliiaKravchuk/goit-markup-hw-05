@@ -154,9 +154,11 @@ header {
 } */
 
 .header-menu-link:focus,
+.header-menu-link:active,
 .header-contacts-link:focus,
 .header-menu-link:hover,
-.header-contacts-link:hover {
+.header-contacts-link:hover,
+.header-contacts-link:active {
   color: #404bbf;
 }
 
@@ -292,7 +294,7 @@ header {
   transition:
     background-color 250ms ease-in-out,
     color 250ms ease-in-out;
-    border:none;
+  border: none;
 }
 
 .hero-btn-blue:hover,
@@ -424,7 +426,7 @@ header {
 
 .team-cards > .social-icons-link:hover,
 .team-cards > .social-icons-link:focus {
-  background-color: chocolate;
+  background-color: #404bbf;
 }
 .footer > .social-icons-link:hover,
 .footer > .social-icons-link:focus {
@@ -510,9 +512,8 @@ header {
   background: #2e2f42;
   padding-bottom: 100px;
   display: flex;
-align-items: baseline;
-justify-content: space-between;
-
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .footer-menu {
@@ -613,7 +614,6 @@ justify-content: space-between;
   background: #4d5ae5;
   display: flex;
   gap: 16px;
-
 }
 
 .footer-input-wrapper {
@@ -621,17 +621,16 @@ justify-content: space-between;
   border-radius: 4px;
   max-width: 264px;
   height: 40px;
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .wrapper_button {
-  display:flex;
-gap: 24px;
+  display: flex;
+  gap: 24px;
 }
 
 .send-icon {
 }
-
 
 /* --------------------------------------------------------------------- */
 
