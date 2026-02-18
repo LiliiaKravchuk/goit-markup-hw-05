@@ -534,6 +534,10 @@ header {
   align-items: baseline;
 }
 
+.footer > .container {
+  display: flex;
+}
+
 .footer-title {
   color: var(--cloud);
   font-family: var(--second-family);
@@ -605,15 +609,17 @@ header {
 
 .footer-modal-input {
   width: 100%;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid var(--white);
   border-radius: 4px;
-  /* width: 360px; */
-  min-height: 40px;
-  outline: transparent;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  background-color: #fff;
 }
-
+.footer-modal-input:focus,
+.footer-modal-input:hover {
+  border: 1px solid #31d0aa;
+}
 .footer-btn-submit {
   border-radius: 4px;
   padding: 8px 24px;
@@ -697,11 +703,11 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 24px;
 
-  padding: 24px;
-  padding: 72px;
 }
-
+.inputs-modal {
+}
 .model-close-btn {
   position: absolute;
   top: 24px;
@@ -730,15 +736,15 @@ header {
 .modal-title {
   text-align: center;
   padding-top: 72px;
-  padding-bottom: 8px;
+  padding-bottom: 16px;
   color: #2e2f42;
   width: 100%;
 }
 
 .model-form {
-  border-radius: 4px;
   width: 360px;
   min-height: 336px;
+  border-radius: 4px;
 }
 
 .modal-field {
@@ -860,13 +866,7 @@ header {
 .check-box-icon {
   fill: #404bbf;
   /* background-color: transparent; */
-  opacity: 0;
 }
-.modal-checkbox-place:checked {
-  .check-box-icon {
-    opacity: 1;
-  }
-
 }
 .custom-policy-text {
   line-height: 1.33;
@@ -890,5 +890,5 @@ header {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
-  margin: 20px 96px 24px 95px;
+  margin: 24px 96px 24px 95px;
 }
