@@ -395,8 +395,8 @@ header {
 .team-cards-img {
   /* min-width: 100%; */
   object-fit: cover;
-width: 264px;
-height: 260px;
+  width: 264px;
+  height: 260px;
   width: 100%;
   display: block;
 }
@@ -409,13 +409,8 @@ height: 260px;
 
 .row-social {
   display: flex;
-}
 
-.social-icons {
-}
-
-.team-cards > .social-icons:not(:last-child) {
-  margin-right: 24px;
+  gap: 24px;
 }
 .social-icons-link {
   display: flex;
@@ -432,12 +427,21 @@ height: 260px;
   fill: #f4f4fd;
 }
 
-.team-cards > .social-icons-link:hover,
-.team-cards > .social-icons-link:focus {
+.social-icons-link:hover,
+.social-icons-link:focus {
   background-color: #404bbf;
 }
-.footer > .social-icons-link:hover,
-.footer > .social-icons-link:focus {
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: #31d0aa;
+}
+
+.footer-social-section > .row-social > .social-icons > .social-icons-link:hover,
+.footer-social-section
+  > .row-social
+  > .social-icons
+  > .social-icons-link:focus {
   background-color: #31d0aa;
 }
 
@@ -498,6 +502,7 @@ height: 260px;
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .portfolio-img-cover:hover .appearing-text-portfolio {
   transform: translateY(0);
   opacity: 1;
@@ -515,22 +520,18 @@ height: 260px;
 .portfolio-description {
 }
 
-.footer {
+.footer > .container {
   padding-top: 100px;
   background: #2e2f42;
   padding-bottom: 100px;
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-}
 
-.footer-menu {
   display: flex;
 
   gap: 120px;
   background: var(--navy-blue);
   /* move into center in horizontal */
-  justify-content: center;
   align-items: baseline;
 }
 
@@ -571,14 +572,14 @@ height: 260px;
 
 .footer-social-section {
   display: flex;
-  margin-left: 120px;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   gap: 16px;
 }
-.footer-social-section > .social-icons {
-  margin-right: 16px;
+
+.footer-social-section > .raw-social {
+  gap: 16px;
 }
 .footer-social-text {
   font-weight: 500;
@@ -608,7 +609,6 @@ height: 260px;
   outline: transparent;
   background-color: transparent;
   background-color: #fff;
-
 }
 
 .footer-btn-submit {
@@ -625,6 +625,7 @@ height: 260px;
   background: #4d5ae5;
   display: flex;
   gap: 16px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-input-wrapper {
@@ -638,11 +639,10 @@ height: 260px;
 .wrapper_button {
   display: flex;
   gap: 24px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.wrapper_button:hover {
-  color:#434455;
+.footer-btn-submit:hover {
+  color: #434455;
 }
 .send-icon {
 }
@@ -687,20 +687,20 @@ height: 260px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   padding: 24px;
+  padding: 72px;
 }
 
 .model-close-btn {
-  border-radius: 100%;
   position: absolute;
   top: 24px;
   right: 24px;
   width: 24px;
   height: 24px;
-  border: none;
-  /* mask-image: url('../images/svg/close-button.svg');
-  -webkit-mask-image: url('../images/svg/close-button.svg'); */
   border: 1px solid #fff;
-  border-radius: 4px;
+  border-radius: 100%;
+  fill: var(--cornflower);
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.1);
 }
 
 .modal-title {
@@ -750,7 +750,7 @@ height: 260px;
   border-radius: 4px;
   /* width: 360px; */
   min-height: 40px;
-  outline: transparent;
+  background-color: transparent;
   transition: 0.3s border-color linear;
   background-color: transparent;
   padding-left: 38px;
@@ -835,6 +835,7 @@ height: 260px;
 }
 
 .check-box-icon {
+  fill: #404bbf;
 }
 
 .custom-policy-text {
