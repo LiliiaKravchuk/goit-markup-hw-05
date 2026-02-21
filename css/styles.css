@@ -432,10 +432,6 @@ header {
   background-color: #404bbf;
 }
 
-.social-icons-link:hover,
-.social-icons-link:focus {
-  background-color: #31d0aa;
-}
 
 .footer-social-section > .row-social > .social-icons > .social-icons-link:hover,
 .footer-social-section
@@ -536,6 +532,8 @@ header {
 
 .footer > .container {
   display: flex;
+  align-items:baseline
+  ;
 }
 
 .footer-title {
@@ -602,6 +600,7 @@ header {
 
 .footer-subscribe-form {
   width: 453px;
+  margin-left: auto;
 }
 
 .footer-modal-form {
@@ -615,7 +614,10 @@ header {
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
+   transition:
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .footer-modal-input:focus,
 .footer-modal-input:hover {
   border: 1px solid #31d0aa;
@@ -645,9 +647,20 @@ header {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 12px;
+line-height: 1.16667;
+letter-spacing: 0.04em;
+color: var(--light-slate);
+outline: none;
 }
-.footer-input-wrapper:focus,
-.footer-btn-submit:focus {
+.footer-input-wrapper:focus{
+  background-color: #31d0aa;
+
+}
+.footer-btn-submit:focus ,
+.footer-btn-submit:hover {
   background-color: #31d0aa;
 }
 
@@ -656,13 +669,10 @@ header {
   gap: 24px;
 }
 
-.footer-btn-submit:hover {
-  color: #434455;
-}
 .send-icon {
 }
 
-.footer-input-wrapper::placeholder {
+.footer-input::placeholder {
   color: white;
 }
 /* --------------------------------------------------------------------- */
@@ -704,7 +714,6 @@ header {
   transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 24px;
-
 }
 .inputs-modal {
 }
@@ -718,20 +727,20 @@ header {
   border-radius: 100%;
   fill: var(--cornflower);
   stroke-width: 1px;
-  stroke: rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
-.model-close-btn:focus,
-.model-close-btn:hover {
+.model-close-btn:focus .close-icon,
+.model-close-btn:hover .close-icon {
   background-color: #404bbf;
+  fill: white;
 }
 .close-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-icon:focus,
 .close-icon:hover {
-  fill: white;
 }
 .modal-title {
   text-align: center;
@@ -780,11 +789,11 @@ header {
   border-radius: 4px;
   /* width: 360px; */
   min-height: 40px;
-  transition: 0.3s border-color linear;
-  background-color: transparent;
   padding-left: 38px;
   padding-top: 11px;
   padding-bottom: 11px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
 }
 
 .input-icon {
@@ -816,13 +825,14 @@ header {
   resize: none;
   padding-top: 8px;
   padding-left: 16px;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+  resize: none;
 }
 
-.modal-textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
+.modal-textarea:focus {
+    outline: transparent;
+border-color:#4d5ae5;
 }
 
 .modal-checkbox-field {
@@ -857,17 +867,18 @@ header {
   background-color: transparent;
   margin-right: 8px;
   fill: transparent;
-  transition:
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .check-box-icon {
-  fill: #404bbf;
+  fill: transparent;
+transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* background-color: transparent; */
 }
-}
+
 .custom-policy-text {
   line-height: 1.33;
   text-decoration: underline;
@@ -891,4 +902,13 @@ header {
   text-align: center;
   color: #fff;
   margin: 24px 96px 24px 95px;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-submit:focus,
+.btn-submit:hover {
+  background-color: #404bbf;
+
+.modal-field-textarea {
+  margin-bottom: 16px;
 }
