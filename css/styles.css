@@ -526,7 +526,7 @@ header {
 .footer > .container {
   display: flex;
   align-items: baseline;
-  gap: 120px;
+  /* gap: 120px; */
 }
 
 .footer-title {
@@ -570,6 +570,7 @@ header {
   align-items: flex-start;
   flex-direction: column;
   gap: 16px;
+  margin-left: 120px;
 }
 
 .footer-social-section > .row-social {
@@ -598,7 +599,7 @@ header {
 
 .footer-subscribe-form {
   width: 453px;
-  margin-left: auto;
+  margin-left: 80px;
 }
 
 .footer-modal-form {
